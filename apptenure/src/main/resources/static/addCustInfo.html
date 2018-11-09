@@ -1,0 +1,262 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>个人融资租赁申请表</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" href="css/app.min.css" />
+	
+	<script type="text/javascript" src="js/loan/jquery.js"></script>
+	<script type="text/javascript" src="js/loan/jquery.validate.js" ></script>
+	<script type="text/javascript" src="js/loan/messages_zh.js" ></script>
+	<script type="text/javascript" src="js/loan/jquery-form.js" ></script>
+	<script type="text/javascript" src="js/loan/ajaxfileupload.js" ></script>
+	<script src="js/loan/addCustInfo.js"></script>
+	<style type="text/css">
+		body {  background: #f4f3f3  }
+		h2{font-size:18px;text-align: center;font-weight:bold;}
+		.error{ color:red;}
+		.logo{margin: 20px auto;}
+		.color-red{color: red;}
+		.p-t{padding-top: 25px;}
+		.wd-wrap{background: #FFF;border: 1px solid #ccc; margin:20px auto;}
+		.cmain-title{text-align: left;font-weight:bold;color:#00acc1;margin: 0 auto 20px;padding: 10px 0;border-bottom: 1px solid #CCCCCC;}
+	</style>
+</head>
+<body>
+	<div class="container logo">
+ 		<img src="img/logo.png" width="150" height="41" />
+ 	</div>
+	<div class="container wd-wrap">
+		<div class="row clearfix">
+		<div class="col-sm-12 col-lg-12 col-md-12 column titl">
+			<h2 class="p-t">个人融资租赁申请表</h2>
+		</div>
+		<div class="col-sm-15 col-lg-15 col-md-15 column">
+			<form class="form-horizontal" role="form" id="addInfoForm">
+				<div class="cmain-title">个人信息<span class="text">（<b class="color-red">* </b>号必填）</span></div>
+					<div class="form-group">
+						<label for="applyno" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>申请单号：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="applyno" name="applyno" placeholder="请输入'阿里申请单号'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="name" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>姓名：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="name" name="name" placeholder="请输入'姓名'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						 <label for="csrq" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>出生日期：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="csrq" name="csrq" placeholder="日期格式：YYYY-mm-dd'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="zjlx" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>证件类型：</label>
+						<div class="col-sm-8 col-xs-8">
+							<select class="form-control" id="zjlx" name="zjlx" >
+								<option value="">请选择“证件类型”</option>
+								<option value="身份证">身份证</option>
+								<option value="临时身份证">临时身份证</option>
+								<option value="护照">护照</option>
+								<option value="台胞证">台胞证</option>
+								<option value="港澳居民通行证">港澳居民通行证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+					 <label for="zjhm" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>证件号码：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="zjhm" name="zjhm" placeholder="请输入'证件号码'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="frontImg" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>证件正面照片：</label>
+							<input name="file" type="file" id = "frontImg" name = "frontImg"/> <input type="button" value="上传" onclick="fileUpload()"/>
+					</div>
+					<div class="form-group">
+						<label for="behindImg" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>证件反面照片：</label>
+							<input name="file" type="file" id = "behindImg" name = "behindImg"/> <input type="button" value="上传" onclick="ajaxFileUpload()"/>
+					</div>
+					<div class="form-group">
+						<label for="driveLicenceFrontImg" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>驾驶证主页照片：</label>
+						<input name="file" type="file" id = "driveLicenceFrontImg" name = "driveLicenceFrontImg"/> <input type="button" value="上传" onclick="driveLicenceFrontImgUpload()"/>
+					</div>
+					<div class="form-group">
+						<label for="driveLicenceBehindImg" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>驾驶证副页照片：</label>
+						<input name="file" type="file" id = "driveLicenceBehindImg" name = "driveLicenceBehindImg"/> <input type="button" value="上传" onclick="driveLicenceBehindImgUpload()"/>
+					</div>
+					<div class="form-group">
+						<label  class="col-sm-3 col-xs-4 control-label">其他文件(可多个一起上传):</label>
+						<input name="file" type="file" id = "otherFile" name = "otherFile" multiple="multiple" /> <input type="button" value="上传" onclick="otherFileUpload()"/>
+					</div>
+					<div class="form-group">
+						 <label for="sjhm" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>手机号码：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="sjhm" name="sjhm" placeholder="请输入'手机号码'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="hyzk" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>婚姻状况：</label>
+						<div class="col-sm-8 col-xs-8">
+							<select class="form-control" id="hyzk" onchange="changeHYZK()" name="hyzk">
+								<option value="">请选择“婚姻状况”</option>
+								<option value="已婚有子女">已婚有子女</option>
+								<option value="已婚无子女">已婚无子女</option>
+								<option value="未婚">未婚</option>
+								<option value="离异">离异</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						 <label for="gzdwmc" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>工作单位名称：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="gzdwmc"  name="gzdwmc" placeholder="请输入'工作单位名称'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						 <label for="dwdz" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>工作单位地址：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="dwdz"  name="dwdz" placeholder="请输入'工作单位地址'：xx省xx市xx区xx路xx号"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="sjjzdz" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>实际居住地地址：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="sjjzdz"  name="sjjzdz" placeholder="请输入'实际居住地地址'：xx省xx市xx区xx路xx号"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="hjszdz" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>户籍所在地地址：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="hjszdz" name="hjszdz" placeholder="请输入'户籍所在地地址'：xx省xx市xx区xx路xx号"/>
+						</div>
+					</div>
+
+				<div class="cmain-title" id="po_title" style="display: none">配偶信息<span class="text">（<b class="color-red">* </b>号必填）</span></div>
+				<div id="po" style="display: none" >
+					<div class="form-group">
+						<label for="poxm" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>配偶姓名：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" value="poxm" class="form-control" id="poxm"  name="poxm" placeholder="请输入'配偶姓名'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="zjlx_po" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>证件类型：</label>
+						<div class="col-sm-8 col-xs-8">
+							<select class="form-control" id="zjlx_po" name="zjlx_po" >
+								<option value="" id="po_zjlx_po">请选择“证件类型”</option>
+								<option value="身份证">身份证</option>
+								<option value="临时身份证">临时身份证</option>
+								<option value="护照">护照</option>
+								<option value="台胞证">台胞证</option>
+								<option value="港澳居民通行证">港澳居民通行证</option>
+							</select>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="zjhm_po" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>证件号码：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" value="zjhm_po" class="form-control" id="zjhm_po" name="zjhm_po" placeholder="请输入'证件号码'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="gzdwmc_po" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>工作单位名称：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" value="gzdwmc_po" class="form-control" id="gzdwmc_po" name="gzdwmc_po" placeholder="请输入'工作单位名称'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="dwdz_po" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>工作单位地址：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" value="dwdz_po" class="form-control" id="dwdz_po"  name="dwdz_po" placeholder="请输入'工作单位地址'：xx省xx市xx区xx路xx号"/>
+						</div>
+					</div>
+				</div>
+				<div class="cmain-title">紧急联系人1<span class="text">（<b class="color-red">* </b>号必填）</span></div>
+					<div class="form-group">
+						<label for="jjlxrxm_1" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>姓名：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="jjlxrxm_1"  name="jjlxrxm_1" placeholder="请输入'姓名'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="jjlxrhm_1" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>手机号码：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="jjlxrhm_1"  name="jjlxrhm_1" placeholder="请输入'手机号码'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ysqrgx_1" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>与申请人关系：</label>
+						<div class="col-sm-8 col-xs-8">
+							<select class="form-control" id="ysqrgx_1" name="ysqrgx_1" >
+								<option value="">请选择“与申请人关系”</option>
+								<option value="亲属">亲属</option>
+								<option value="亲属">家人</option>
+							</select>
+						</div>
+					</div>
+			
+				<div class="cmain-title">紧急联系人2<span class="text">（<b class="color-red">* </b>号必填）</span></div>
+					<div class="form-group">
+						<label for="jjlxrxm_2" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>姓名：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="jjlxrxm_2"  name="jjlxrxm_2" placeholder="请输入'姓名'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="jjlxrhm_2" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>手机号码：</label>
+						<div class="col-sm-8 col-xs-8">
+							<input type="text" class="form-control" id="jjlxrhm_2"  name="jjlxrhm_2" placeholder="请输入'手机号码'"/>
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="ysqrgx_1" class="col-sm-3 col-xs-4 control-label"><span style="color: red;">*</span>与申请人关系：</label>
+						<div class="col-sm-8 col-xs-8">
+							<select class="form-control" id="ysqrgx_2" name="ysqrgx_2" >
+								<option value="">请选择“与申请人关系”</option>
+								<option value="亲属">亲属</option>
+								<option value="家人">家人</option>
+								<option value="同事">同事</option>
+								<option value="朋友">朋友</option>
+								<option value="其他">其他</option>
+							</select>
+						</div>
+					</div>
+					<div>
+						<input type="hidden" value="hklx" id="hklx" name="hklx"/>
+						<input type="hidden" value="khxl" id="khxl" name="khxl"/>
+						<input type="hidden" value="gcmd" id="gcmd" name="gcmd"/>
+						<input type="hidden" value="ywfc" id="ywfc" name="ywfc"/>
+						<input type="hidden" value="sfyjsz" id="sfyjsz" name="sfyjsz"/>
+						<input type="hidden" value="jszdah" id="jszdah" name="jszdah"/>
+						<input type="hidden" value="clsydsf" id="clsydsf" name="clsydsf"/>
+						<input type="hidden" value="clsydcs" id="clsydcs" name="clsydcs"/>
+						<input type="hidden" value="khxb" id="khxb" name="khxb"/>
+						<input type="hidden" value="dwzj" id="dwzj" name="dwzj"/>
+						<input type="hidden" value="fcszsf" id="fcszsf" name="fcszsf"/>
+						<input type="hidden" value="fcszcs" id="fcszcs" name="fcszcs"/>
+						<input type="hidden" value="posjdh" id="posjdh" name="posjdh"/>
+						<input type="hidden" value="podwdh" id="podwdh" name="podwdh"/>
+						<input type="hidden" value="fcxxdz" id="fcxxdz" name="fcxxdz"/>
+						<input type="hidden" value="" id="idCardBehindImg" name="idCardBehindImg"/>
+						<input type="hidden" value="" id="idCardFrontImg" name="idCardFrontImg"/>
+						<input type="hidden" value="" id="driveLicenceFront" name="driveLicenceFront"/>
+						<input type="hidden" value="" id="driveLicenceBehind" name="driveLicenceBehind"/>
+						<input type="hidden" value="" id="otherFiles" name="otherFiles"/>
+					</div>
+					<br />
+					<div class="form-group">
+						<div class="col-xs-12 col-sm-12 col-md-12 column">
+							 <input type="submit" name="submit" value="提交" class="btn btn-primary btn-default active btn-block"/>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

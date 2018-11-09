@@ -1,0 +1,42 @@
+<div class="container w-xxl w-auto-xs" ng-controller="SigninFormController" ng-init="app.settings.container = false;">
+  <a class="navbar-brand block m-t-xxxl m-b-md">
+    <img src="img/logo_icon.png" alt="." style="max-height:40px">
+    <span class="hidden-folded m-l-xs">先锋太盟</span>
+  </a>
+  <div class="m-b-lg">
+    <div class="text-center m-b-md">
+      <strong>请填写用户名与密码进行登录</strong>
+    </div>
+    <form name="form" class="form-validation">
+      <div class="text-danger wrapper text-center" ng-show="authError">
+          用户名或密码不正确
+      </div>
+      <div class="list-group list-group-sm">
+        <div class="list-group-item">
+          <div class="input-group">
+            <span class="input-group-addon no-bg"><i class="icon-user"></i></span>
+            <input type="user" class="form-control input-lg" placeholder="请输入用户名" ng-model="user.username" required>
+          </div>
+        </div>
+
+        <div class="list-group-item">
+           <div class="input-group">
+             <span class="input-group-addon no-bg"><i class="icon-lock"></i></span>
+             <input type="password" placeholder="请输入密码" class="form-control input-lg" inputmode="numeric" ng-model="user.password" required>
+           </div>
+
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="checkbox">
+          <label class="i-checks">
+            <input type="checkbox" checked="" ng-model="rememberPassword"><i></i> 记住密码
+          </label>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg btn-primary btn-block m-b-sm" ng-click="login()" >登录</button>
+    </form>
+  </div>
+  <div class="text-center" ng-include="'tpl/blocks/page_footer.html'">
+    {% include 'blocks/page_footer.html' %}
+  </div>

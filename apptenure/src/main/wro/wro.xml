@@ -1,0 +1,75 @@
+<groups xmlns="http://www.isdc.ro/wro">
+    <group name="app.min">
+        <css>file:@project.basedir@/src/main/resources/static/libs/jquery/bootstrap/dist/css/bootstrap.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/css/font.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/css/ngGallery.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/css/app.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/css/upload.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/libs/angular/angular-calendar/angular-bootstrap-calendar.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/libs/angular/angular-calendar/angular-bootstrap-calendar.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/css/calendar.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/libs/angular/tree-grid-directive/treeGrid.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/libs/angular/angular-ivh-treeview-master/ivh-treeview.css</css>
+        <css>file:@project.basedir@/src/main/resources/static/libs/angular/angular-ivh-treeview-master/ivh-treeview-theme-basic.css</css>
+        <js>file:@project.basedir@/src/main/resources/static/libs/jquery/jquery/dist/jquery.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/jquery/bootstrap/dist/js/bootstrap.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular/angular.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-animate/angular-animate.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-aria/angular-aria.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-cookies/angular-cookies.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-messages/angular-messages.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-resource/angular-resource.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-sanitize/angular-sanitize.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-touch/angular-touch.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-checklist/checklist-model.js</js>
+        <!-- <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-material/angular-material.js</js>-->
+
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-ui-router/release/angular-ui-router.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/ngstorage/ngStorage.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-ui-utils/ui-utils.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/tree-grid-directive/tree-grid-directive.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-bootstrap/ui-bootstrap-tpls.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-bootstrap/angular-bootstrap-confirm.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/oclazyload/dist/ocLazyLoad.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-translate/angular-translate.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-translate-loader-static-files/angular-translate-loader-static-files.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-translate-storage-cookie/angular-translate-storage-cookie.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-translate-storage-local/angular-translate-storage-local.js</js>
+
+
+        <js>file:@project.basedir@/src/main/resources/static/js/app.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/config.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/config.lazyload.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/config.router.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/main.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-calendar/moment.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/services/ui-load.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/services/conductss-service.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/services/project-service.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/filters/fromNow.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/setnganimate.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/singleImgUpload.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-butterbar.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-focus.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-fullscreen.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-jq.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-module.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-nav.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-scroll.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-shift.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/ui-toggleclass.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/singleImgUpload.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/directives/imgPreviewDirective.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/js/controllers/bootstrap.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-calendar/angular-bootstrap-calendar-tpls.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-calendar/interact.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-calendar/moment.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-ivh-treeview-master/ivh-treeview.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-ngGallery/ngGallery.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-calendar/calendar-converter.js</js>
+        <!--<js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-timer/angular-timer.js</js>-->
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-textAngular/textAngular.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-textAngular/textAngular-sanitize.js</js>
+        <js>file:@project.basedir@/src/main/resources/static/libs/angular/angular-textAngular/textAngularSetup.js</js>
+    </group>
+</groups>

@@ -1,0 +1,57 @@
+logging:
+  level:
+    org.springframework.web: DEBUG
+  file: /var/www/html/tmtenure.log
+server:
+  port: 8588
+spring:
+  http:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+  jpa:
+    database: POSTGRESQL
+    show-sql: true
+    hibernate:
+      #ddl-auto: update
+      ddl-auto: update
+  redis:
+    host: 192.168.1.210
+    port: 6379
+
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5432/baoyouapp
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+file:
+  idCardPath: /var/www/html/idCard/
+  requestIdCardPath: http://192.168.1.115:8588/files/download/idCard/
+  faceImagePath: /var/www/html/faceImage/
+  requestFaceImagePath: http://192.168.1.115:8588/files/download/faceImage/
+  pdfPath: /var/www/html/pdf/
+  requestPdfPath: http://192.168.1.115:8588/files/download/pdf/
+  signedPdfPath: /var/www/html/signedPdf/
+  requestSignedPdfPath: http://192.168.1.115:8588/files/download/signedPdf/
+
+admin:
+  auth: Basic d2VjaGF0OmxlYWR1MjAxNg==
+request:
+  adminServerUrl: http://localhost:8083
+  coreServerUrl: http://116.228.224.58:8077/TMZLTEST/app/
+message:
+  userId: JJ2075
+  password: 127628
+  pszMsg: 验证码：xxxxxx，为保障您的账号安全，请勿泄露，有效期5分钟。
+  iMobiCount: 1
+  MsgId: 0
+faceid:
+  apiKey: hoDjDYZtZMlsfOjcqRry4-EYairaBylq
+  apiSecret: K6BfzPzovHSFSPgF8lkXhSXxdYxzSBaD

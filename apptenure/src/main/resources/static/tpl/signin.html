@@ -1,0 +1,34 @@
+<div class="container w-xxl w-auto-xs" ng-controller="signFormController" ng-init="app.settings.container = false;">
+  <a class="navbar-brand block m-t-xxxl m-b-md">
+    <img src="img/youzhirong.png" alt="." style="max-height:40px">
+    <span class="hidden-folded m-l-xs">优质融</span>
+  </a>
+  <div class="m-b-lg">
+    <div class="text-center m-b-md">
+      <strong>请填写手机号和验证码进行登录</strong>
+    </div>
+    <form name="form" class="form-validation" novalidate>
+      <div class="text-danger wrapper text-center" ng-show="authError">
+        {{authError}}
+      </div>
+      <div class="list-group list-group-sm">
+        <div class="list-group-item">
+          <div class="input-group" style="margin-bottom:5px">
+            <span class="input-group-addon no-bg"><i class="icon-user"></i></span>
+            <input type="number" name="phoneNum" class="form-control input-lg" placeholder="请输入备案手机号" ng-model="user.phone"  ng-pattern="/(^\d{11}$)/" required>
+            <span style="color: red" ng-show="form.phoneNum.$invalid">
+             <span ng-show="form.phoneNum.$error.pattern">*请输入正确的手机号</span>
+            </span>
+          </div>
+          <div class="input-group ">
+            <span class="input-group-addon no-bg"><i class="icon-lock"></i></span>
+            <input type="text" placeholder="请获取验证码" class="form-control input-lg" ng-model="user.code" ng-pattern="/^[0-9]{6}$/" required>
+            <span class="input-group-addon no-bg no-border " style="padding: 5px" role="button" ><button class="btn btn-sm" style="background-color: #51d7c8;color: white" ng-click="getSmsCode()"><timer interval="1000" countdown="60" autostart="false" ng-show="startCountdown">{{countdown}}</timer>{{showMsg}}</button> </span>
+          </div>
+            <p class="help-block m-b" style="margin-bottom:5px">验证码将以短信方式发送至您的手机</p>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-lg btn btn-block m-b-sm" ng-click="login()" style="background-color: #51d7c8;color: white">验证登录</button>
+    </form>
+  </div>
+</div>
